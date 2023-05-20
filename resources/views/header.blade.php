@@ -52,7 +52,9 @@
         }
     ?>
     <br><br>
-<center>
-    @yield('content')
-</center>
+<div>
+    <center>
+        @yield('content')
+    </center>
+</div>
 <br><br>

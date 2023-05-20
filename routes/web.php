@@ -34,3 +34,4 @@ Route::get('/login', [LoginController::class, 'index']);
 
 use App\Http\Controllers\RegisterController;
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'AddUser'])->name('updateUser');

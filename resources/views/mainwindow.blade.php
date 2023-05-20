@@ -17,11 +17,6 @@
         font-family: brush script mt, cursive;
     }
 </style>
-   
-<center>
-</center>
-</div>
-
 <div class="container" id="sliderDiv" style="width: 50%; height: auto;">
     
     <div class="wrapper">
@@ -31,8 +26,3 @@
         <img src="images/photo4.jpg">
     </div> 
 </div>
-<div id="bottomDiv">
-    <marquee>
-        <h3>Sebastian Arendarczyk & Kamil Szywała</h3>
-    </marquee>
-</div> 
