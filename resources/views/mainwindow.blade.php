@@ -25,19 +25,19 @@
         
             <div id="buttonsDiv">
             <form method="post" action="">
-                <input type="button" value="Home" id="transparent" onclick="location.href='mainwindow.php'">
+                <input type="button" value="Home" id="transparent" onclick="location.href='/'">
                 <input type="button" value="Menu"  id="transparent" onclick="location.href='/menu'">
-                <input type="button" value="About Us" id="transparent" onclick="location.href='aboutus.php'">
-                <input type="button" value="Contact Us" id="transparent" onclick="location.href='contact.php'">
-                <input type="button" value="Gallery" id="transparent" onclick="location.href='gallery.php'">
+                <input type="button" value="About Us" id="transparent" onclick="location.href='/aboutus'">
+                <input type="button" value="Contact Us" id="transparent" onclick="location.href='/contact'">
+                <input type="button" value="Gallery" id="transparent" onclick="location.href='/gallery'">
                 <?php
                     $name1 = @$_SESSION['name'];
                     if (@$_SESSION["login"]) {
                         echo "<input type='submit' value='Logout' name='logout' id='transparent'>
                                 <label id=\"label1\">Hello $name1!</label>";
                     } else {
-                        echo "<input type='button' value='Login' id='transparent' onclick=\"location.href='login.php'\">
-                            <input type='button' value='Register' id='transparent' onclick=\"location.href='register.php'\">";
+                        echo "<input type='button' value='Login' id='transparent' onclick=\"location.href='/login'\">
+                            <input type='button' value='Register' id='transparent' onclick=\"location.href='/register'\">";
                     }
                 ?>
             </div>

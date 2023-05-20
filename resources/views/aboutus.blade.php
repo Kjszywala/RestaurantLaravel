@@ -8,7 +8,7 @@
     <center>
         <img id="img1" src="images/logo.png"/>
         <h1 id="about">About Us</h1>
-        <button id="button" onclick="location.href='mainwindow.php'">Main Menu</button>
+        <button id="button" onclick="location.href='/'">Main Menu</button>
     </center><br>
     <div id="rcorners1" >
         <div id="div">

@@ -19,3 +19,18 @@ Route::get('/', function () {
 
 use App\Http\Controllers\MenuController;
 Route::get('/menu', [MenuController::class, 'index']);
+
+use App\Http\Controllers\AboutController;
+Route::get('/aboutus', [AboutController::class, 'index']);
+
+use App\Http\Controllers\ContactController;
+Route::get('/contact', [ContactController::class, 'index']);
+
+use App\Http\Controllers\GalleryController;
+Route::get('/gallery', [GalleryController::class, 'index']);
+
+use App\Http\Controllers\LoginController;
+Route::get('/login', [LoginController::class, 'index']);
+
+use App\Http\Controllers\RegisterController;
+Route::get('/register', [RegisterController::class, 'index']);

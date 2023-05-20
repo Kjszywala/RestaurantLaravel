@@ -12,7 +12,7 @@
     <center>
         <img id="img2" src="images/logo.png"/>
         <h1 id="register">Contact Us</h1>
-        <button id="button" onclick="location.href='mainwindow.php'">Main Menu</button>
+        <button id="button" onclick="location.href='/'">Main Menu</button>
     </center><br>
 <div id="rcorners1" style="height: 550px;">
     <center>
