@@ -1,3 +1,5 @@
+@extends('header')
+@section('content')
 <?php
     session_start();
     include 'phpscripts.php';
@@ -8,12 +10,6 @@
   <title>Contact Us</title>
   <link rel="stylesheet" href="contact.css">
 </head>
-<body>
-    <center>
-        <img id="img2" src="images/logo.png"/>
-        <h1 id="register">Contact Us</h1>
-        <button id="button" onclick="location.href='/'">Main Menu</button>
-    </center><br>
 <div id="rcorners1" style="height: 550px;">
     <center>
         <form method=POST action="">
@@ -56,5 +52,4 @@
         }
     ?>
 </div>
-</body>
-</html>
+@endsection

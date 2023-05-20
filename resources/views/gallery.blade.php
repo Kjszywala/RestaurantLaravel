@@ -1,24 +1,21 @@
-
+@extends('header')
+@section('content')
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Galeria </title>
-
     <link rel="stylesheet" href="gallery.css">
-
 </head>
 <body>
-		<center>
-        <img src="images/logo.png" id="img1"><br>
-	<?php
-        if(isset($_POST['logout'])){
-            $_SESSION["login"] = false;
-            header("Location: mainwindow.php");
-            die();
-        }
-    ?>
-    <button id="button" onclick="location.href='mainwindow.php'">Main Menu</button>
-	<br>
+    <center>
+        <?php
+            if(isset($_POST['logout'])){
+                $_SESSION["login"] = false;
+                header("Location: mainwindow.php");
+                die();
+            }
+        ?>
+        <br>
 	<h1 id="gallery_text">Our gallery</h1>
 	</center>
 	
@@ -94,5 +91,4 @@
 
 </section>
 
-</body>
-</html>
+@endsection

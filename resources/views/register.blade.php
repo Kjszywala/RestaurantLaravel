@@ -1,18 +1,16 @@
+@extends('header')
+@section('content')
 <?php
     session_start();
     include 'phpscripts.php';    
 ?>
-<html>
 <head>
   <meta charset="utf-8">
   <title>Register</title>
   <link rel="stylesheet" href="register.css">
 </head>
-<body>
     <center>
-        <img id="img2" src="images/logo.png"/>
         <h1 id="register">Register</h1>
-        <button id="button" onclick="location.href='/'">Main Menu</button>
     </center><br>
 <div id="rcorners1" style="height: 550px;">
     <center>
@@ -85,5 +83,4 @@
     ?>
     </center>
 </div>
-</body>
-</html>
+@endsection

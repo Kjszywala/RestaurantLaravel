@@ -1,3 +1,5 @@
+@extends('header')
+@section('content')
 <?php
     session_start();
     include 'phpscripts.php';
@@ -20,18 +22,15 @@
         fclose($myfile);
     }
 ?>
-<html>
 <head>
   <meta charset="utf-8">
   <title>Login</title>
   <link rel="stylesheet" href="login.css">
 </head>
-<body>
     <center>
-        <img id="img2" src="images/logo.png"/>
         <h1 id="login">Login</h1>
-        <button id="button" onclick="location.href='/'">Main Menu</button>
     </center><br>
+
 <div id="rcorners1" >
     <div style="background-color: transparent; width: 50%; height: 500px; float:left;">
     <br><center>
@@ -88,16 +87,15 @@
         }
     ?>
     </div>
-    </center>
-    <div style="background-color: transparent; width:50%; height: 500px; float:left;">
-    <br><center>
+    <div style="background-color: transparent; width:50%; height: 500px; float:right;">
+    <br>
         <h2>SERVED EVERY DAY SINCE 1990</h2>
         <h5>
         Restaurant opened on Thanksgiving Day 1990. Chef / Owner Ron<br>Silver began baking pies and selling them to restaurants and his neighbors<br>out of a small kitchen at the corner of Hudson and North Moore St. in<br>Tribeca. Today, NYC’s beloved restaurant and pie shop celebrates 32<br>years of classic, made from scratch American cooking.
         </h5>
         <img id="img1" src="images/old.jpg" sizes="10"/>
-    </center>
     </div>
+    </center>
 </div>
-</body>
-</html>
+
+@endsection

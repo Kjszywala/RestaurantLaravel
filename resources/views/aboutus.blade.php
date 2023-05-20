@@ -1,15 +1,19 @@
-<html>
+<!-- <html>
 <head>
   <meta charset="utf-8">
   <title>AboutUs</title>
   <link rel="stylesheet" href="aboutus.css">
-</head>
-<body>
-    <center>
-        <img id="img1" src="images/logo.png"/>
-        <h1 id="about">About Us</h1>
-        <button id="button" onclick="location.href='/'">Main Menu</button>
-    </center><br>
+</head> -->
+<!-- <body> -->
+@section('content')
+@extends('header')
+<br><br>
+<div>
+    <head>
+    <meta charset="utf-8">
+    <title>AboutUs</title>
+    <link rel="stylesheet" href="aboutus.css">
+    </head>
     <div id="rcorners1" >
         <div id="div">
             <h5>
@@ -61,5 +65,7 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+@endsection
+<!-- </div> -->
+<!-- </body> -->
+<!-- </html> -->
