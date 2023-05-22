@@ -22,7 +22,7 @@
       @endphp
 
       @if ($isLoggedIn)
-          <input type="submit" value="Logout" name="logout" id="transparent">
+          <input type="button" value="Logout" name="logout" id="transparent" onclick="location.href='/logout'">
           <label id="label1">Hello {{ $name1 }}!</label>
       @else
           <input type="button" value="Login" id="transparent" onclick="location.href='/login'">

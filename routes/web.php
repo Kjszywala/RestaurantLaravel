@@ -36,3 +36,6 @@ Route::post('/login', [LoginController::class, 'login'])->name('logUser');
 use App\Http\Controllers\RegisterController;
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'AddUser'])->name('updateUser');
+
+use App\Http\Controllers\LogoutController;
+Route::get('/logout', [LogoutController::class, 'index'])->name('logoutUser');
