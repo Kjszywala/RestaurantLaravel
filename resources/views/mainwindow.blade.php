@@ -16,7 +16,7 @@
         font-family: brush script mt, cursive;
     }
 </style>
-<div class="container" id="sliderDiv" style="width: 50%; height: auto;">
+<div class="container" id="sliderDiv" style="width: 50%; height: auto; margin-top:0px;">
     
     <div class="wrapper">
         <img src="images/photo1.jpg">

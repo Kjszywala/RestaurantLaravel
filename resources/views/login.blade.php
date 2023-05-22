@@ -8,16 +8,13 @@
   <title>Login</title>
   <link rel="stylesheet" href="login.css">
 </head>
-    <center>
-        <h1 id="login">Login</h1>
-    </center><br>
 <div id="rcorners1" >
-    <div style="background-color: transparent; width: 50%; height: 500px; float:left;">
+    <div style="background-color: transparent; width: 50%; height: 900px; float:left;">
     <br><center>
-        <h2>Login</h2>
         <h5>Sign in to get most from our restaurant</h5>
         <form method=POST action="{{route('logUser')}}">
             @csrf
+            <br><br><br>
             <table>
                 <tr>
                     <td><b>Login</b></td>
@@ -31,7 +28,7 @@
                     <td colspan="2"><input type="submit" name="singIn" id="test" value='Sign In' style='width: 100%;'></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="button" name="singUp" id="test" value='Sign Up' style='width: 100%;' onclick="location.href='register.php'"></td>
+                    <td colspan="2"><input class="buttonSignUp" type="button" name="singUp" id="test" value='Sign Up' style='width: 100%;' onclick="location.href='register.php'"></td>
                 </tr>
             </table>
         </form>

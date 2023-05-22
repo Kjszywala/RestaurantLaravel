@@ -23,7 +23,7 @@
 
       @if ($isLoggedIn)
           <input type="button" value="Logout" name="logout" id="transparent" onclick="location.href='/logout'">
-          <label id="label1">Hello {{ $name1 }}!</label>
+          <label id="label1" style="color:white;">Hello {{ $name1 }}!</label>
       @else
           <input type="button" value="Login" id="transparent" onclick="location.href='/login'">
           <input type="button" value="Register" id="transparent" onclick="location.href='/register'">
@@ -49,12 +49,14 @@
           </div>
         
         @else
+        <center>
           <div id="logToBook">
               <h4 id='pleaselogin'>Please log in to book a table.</h4>
           </div>
+        </center>
         @endif
     <br><br>
-<div class="row" style="margin-top:-140px;">
+<div class="row" style="margin-top:-100px;">
     <div class="col-12 text-center">
         @yield('content')
 	</div>
