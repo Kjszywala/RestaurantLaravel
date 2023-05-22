@@ -67,16 +67,36 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Run website
 
-To run a website you need to clone the repository, in the repository folder run command in cmd:
+To run a website, follow these steps:
 
-'composer install'
+Clone the repository to your local machine.
 
-Make sure that you have vendor folder in your repository folder.
+Open a command prompt or terminal in the repository folder.
 
-In the same folder run cmd command:
+Run the following command to install the dependencies using Composer:
 
-'php artisan key:generate'
+```ruby
+composer install
+```
 
-At the end:
+Make sure you have the composer command installed on your system.
 
-'php artisan serve'
+After the installation is complete, ensure that the vendor folder is present in your repository folder.
+
+In the same folder, run the following command to generate an application key:
+
+```ruby
+php artisan key:generate
+```
+
+Finally, start the development server by running the following command:
+
+```ruby
+php artisan serve
+```
+
+This will start the server, and you will see a URL (e.g., http://localhost:8000) where you can access your website.
+
+Make sure you have PHP installed on your system and the php command is available in your system's PATH.
+
+By following these steps, you should be able to run the website locally.
