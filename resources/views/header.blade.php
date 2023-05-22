@@ -16,16 +16,18 @@
       <input type="button" value="About Us" id="transparent" onclick="location.href='/aboutus'">
       <input type="button" value="Contact Us" id="transparent" onclick="location.href='/contact'">
       <input type="button" value="Gallery" id="transparent" onclick="location.href='/gallery'">
-      <?php
-          $name1 = @$_SESSION['name'];
-          if (@$_SESSION["login"]) {
-              echo "<input type='submit' value='Logout' name='logout' id='transparent'>
-                      <label id=\"label1\">Hello $name1!</label>";
-          } else {
-              echo "<input type='button' value='Login' id='transparent' onclick=\"location.href='/login'\">
-                  <input type='button' value='Register' id='transparent' onclick=\"location.href='/register'\">";
-          }
-      ?>
+      @php
+          $name1 = session('name');
+          $isLoggedIn = session('login');
+      @endphp
+
+      @if ($isLoggedIn)
+          <input type="submit" value="Logout" name="logout" id="transparent">
+          <label id="label1">Hello {{ $name1 }}!</label>
+      @else
+          <input type="button" value="Login" id="transparent" onclick="location.href='/login'">
+          <input type="button" value="Register" id="transparent" onclick="location.href='/register'">
+      @endif
     </div>
   </form>
 </header>

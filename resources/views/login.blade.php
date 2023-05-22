@@ -2,24 +2,6 @@
 @section('content')
 <?php
     include 'phpscripts.php';
-    // function getPassFile() {
-    //     $serwer = mysqli_connect("localhost", "root", "", "restauracja")
-    //         or exit("cannot connect to database");
-    //     mysqli_set_charset($serwer, "utf8");
-    //     $zapytanie = "SELECT * FROM `users`";
-    //     $uzytkownicy = mysqli_query($serwer, $zapytanie)
-    //             or exit("zle sformulowane zadanie");
-    //     $output = "";
-    //     while ($row = mysqli_fetch_assoc($uzytkownicy)) {
-    //         foreach ($row as $i) {
-    //             $output .= $i . ";";
-    //         }
-    //         $output .= "\n";
-    //     }
-    //     $myfile = fopen("users.txt", "w") or die("Unable to open file!");
-    //     fwrite($myfile,$output);
-    //     fclose($myfile);
-    // }
 ?>
 <head>
   <meta charset="utf-8">

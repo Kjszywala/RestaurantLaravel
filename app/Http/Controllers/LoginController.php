@@ -1,9 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-
 class LoginController extends Controller
 {
     public function index(){
@@ -20,8 +19,8 @@ class LoginController extends Controller
                 // User login successful
                 $message = "User successfully logged in.";
                 $type = "success";
-                $_SESSION["login"] = true;
-                $_SESSION["name"] = $user->name;
+                Session::put('login', true);
+                Session::put('name', $user->name);
             } else {
                 // Incorrect password
                 $message = "Incorrect password.";
