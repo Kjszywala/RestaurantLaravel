@@ -7,7 +7,6 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
-        font-family: 'Times New Roman', serif;
     }
     #rcorners1 {
         border-radius: 25px;
@@ -63,7 +62,6 @@
     }
     #register{
         color: black;
-        font-family: brush script mt, cursive;
     }
     th, td {
         padding: 11px;
