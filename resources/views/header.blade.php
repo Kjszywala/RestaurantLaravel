@@ -46,7 +46,7 @@
         @if ($isLoggedIn)
           <div id="bookdiv">
               <button id="book" onclick="location.href='booking_modyfikacje.php'">Book a Table</button>
-          </div>";
+          </div>
         
         @else
           <div id="logToBook">
