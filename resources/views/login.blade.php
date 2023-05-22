@@ -36,6 +36,7 @@
         <h2>Login</h2>
         <h5>Sign in to get most from our restaurant</h5>
         <form method=POST action="{{route('logUser')}}">
+            @csrf
             <table>
                 <tr>
                     <td><b>Login</b></td>

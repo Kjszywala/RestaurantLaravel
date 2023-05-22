@@ -15,15 +15,13 @@ class LoginController extends Controller
         $password = $request->input('password');
 
         $user = User::where('login', $login)->first();
-        var_dump($user);
         if ($user) {
-            if (password_verify($user->password,  $password)) {
+            if (password_verify($password, $user->password)) {
                 // User login successful
                 $message = "User successfully logged in.";
                 $type = "success";
                 $_SESSION["login"] = true;
                 $_SESSION["name"] = $user->name;
-                var_dump($_SESSION["login"]);
             } else {
                 // Incorrect password
                 $message = "Incorrect password.";
