@@ -1,9 +1,5 @@
 @extends('header')
 @section('content')
-<?php
-    session_start();
-    include 'phpscripts.php';
-?>
 <html>
 <head>
   <meta charset="utf-8">

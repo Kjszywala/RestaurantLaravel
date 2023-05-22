@@ -59,3 +59,15 @@
         height: 100px;
         float: left;
     }
+
+    .table .thead-dark th {
+        color: #fff;
+        background-color: #343a40;
+        border-color: #454d55;
+      }
+      
+      .table .thead-light th {
+        color: #495057;
+        background-color: #e9ecef;
+        border-color: #dee2e6;
+      }
