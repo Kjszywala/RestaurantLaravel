@@ -64,3 +64,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Run website
+
+To run a website you need to clone the repository, in the repository folder run command in cmd:
+
+'composer install'
+
+Make sure that you have vendor folder in your repository folder.
+
+In the same folder run cmd command:
+
+'php artisan key:generate'
+
+At the end:
+
+'php artisan serve'
