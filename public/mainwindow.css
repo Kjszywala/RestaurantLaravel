@@ -110,6 +110,7 @@
     #bookdiv{
         text-align: center;
         height: 250px;
+        margin-top: 30px;
     }
     #book{
         background-color: #04AA6D;

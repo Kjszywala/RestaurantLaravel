@@ -32,40 +32,27 @@
   </form>
 </header>
 @if (!empty($message))
-<script>
-    swal({
-        title: "{{ $message }}",
-        icon: "{{ $type }}",
-        button: "OK",
-    });
-</script>
+  <script>
+      swal({
+          title: "{{ $message }}",
+          icon: "{{ $type }}",
+          button: "OK",
+      });
+  </script>
 @endif
-    <?php
-        if(isset($_POST['logout'])){
-            $_SESSION["login"] = false;
-            header("Location: mainwindow.php");
-            die();
-        }
-    ?>
     <div id = "image">
         <img src="images/logo.png" id="logo">
     </div>
-    <?php
-        if(@$_SESSION['login'] == true){
-            echo "
-                <div id=\"bookdiv\">
-                    <button id=\"book\" onclick=\"location.href='booking_modyfikacje.php'\">Book a Table</button>
-                </div>";
-        }
-        else{
-            echo
-                "<center>
-                    <div id=\"logToBook\">
-                        <h4 id='pleaselogin'>Please log in to book a table.</h4>
-                    </div>
-                </center>";
-        }
-    ?>
+        @if ($isLoggedIn)
+          <div id="bookdiv">
+              <button id="book" onclick="location.href='booking_modyfikacje.php'">Book a Table</button>
+          </div>";
+        
+        @else
+          <div id="logToBook">
+              <h4 id='pleaselogin'>Please log in to book a table.</h4>
+          </div>
+        @endif
     <br><br>
 <div class="row" style="margin-top:-140px;">
     <div class="col-12 text-center">
