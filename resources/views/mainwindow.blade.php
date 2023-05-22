@@ -1,5 +1,5 @@
 @extends('header')
-@yield('content')
+@section('content')
 <?php
     session_set_cookie_params(0);
     session_start();
@@ -26,3 +26,4 @@
         <img src="images/photo4.jpg">
     </div> 
 </div>
+@endsection

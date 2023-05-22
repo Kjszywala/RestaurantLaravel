@@ -1,6 +1,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ asset('mainwindow.css') }}">
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
 <header id="headerStyle">    
@@ -52,9 +53,103 @@
         }
     ?>
     <br><br>
-<div>
-    <center>
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
         @yield('content')
-    </center>
+	</div>
 </div>
 <br><br>
+<div class="row">
+<footer class="footer bg-dark text-white">
+  <div class="container1">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h5>About Us</h5>
+        <p>We are a fine dining restaurant that specializes in providing a unique culinary experience.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5>Contact Information</h5>
+        <p>123 Main Street, City, State</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@example.com</p>
+      </div>
+      <div class="col-lg-4">
+        <h5>Opening Hours</h5>
+        <p>Monday - Friday: 9am - 10pm</p>
+        <p>Saturday - Sunday: 10am - 11pm</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <hr class="divider">
+        <p class="text-center">&copy; 2023 Your Restaurant. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<style>
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.container12 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 50px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer-social ul li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+</style>

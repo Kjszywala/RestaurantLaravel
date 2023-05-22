@@ -31,7 +31,7 @@
         width: 100px;
     }
     #buttonsDiv{
-        margin-top: 30px;
+        margin-top: 10px;
         text-align: center;
         vertical-align: middle;
     }
@@ -53,7 +53,6 @@
     }
     #sliderDiv{
         padding: 0;
-        margin: 0;
         margin-top: 4cm;
         box-sizing: border-box;
     }
@@ -61,8 +60,6 @@
     .container{
         width: 50%;
         height: 60%;
-        position: absolute;
-        transform: translate(-50%,-50%);
         top: 50%;
         left: 50%;
         overflow: hidden;
