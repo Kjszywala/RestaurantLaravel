@@ -4,28 +4,37 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
-<header id="headerStyle">    
-        
-            <div id="buttonsDiv">
-            <form method="post" action="">
-                <input type="button" value="Home" id="transparent" onclick="location.href='/'">
-                <input type="button" value="Menu"  id="transparent" onclick="location.href='/menu'">
-                <input type="button" value="About Us" id="transparent" onclick="location.href='/aboutus'">
-                <input type="button" value="Contact Us" id="transparent" onclick="location.href='/contact'">
-                <input type="button" value="Gallery" id="transparent" onclick="location.href='/gallery'">
-                <?php
-                    $name1 = @$_SESSION['name'];
-                    if (@$_SESSION["login"]) {
-                        echo "<input type='submit' value='Logout' name='logout' id='transparent'>
-                                <label id=\"label1\">Hello $name1!</label>";
-                    } else {
-                        echo "<input type='button' value='Login' id='transparent' onclick=\"location.href='/login'\">
-                            <input type='button' value='Register' id='transparent' onclick=\"location.href='/register'\">";
-                    }
-                ?>
-            </div>
-        </form>
-    </header>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<header id="headerStyle">     
+  <div id="buttonsDiv">
+    <form method="post" action="">
+      <input type="button" value="Home" id="transparent" onclick="location.href='/'">
+      <input type="button" value="Menu"  id="transparent" onclick="location.href='/menu'">
+      <input type="button" value="About Us" id="transparent" onclick="location.href='/aboutus'">
+      <input type="button" value="Contact Us" id="transparent" onclick="location.href='/contact'">
+      <input type="button" value="Gallery" id="transparent" onclick="location.href='/gallery'">
+      <?php
+          $name1 = @$_SESSION['name'];
+          if (@$_SESSION["login"]) {
+              echo "<input type='submit' value='Logout' name='logout' id='transparent'>
+                      <label id=\"label1\">Hello $name1!</label>";
+          } else {
+              echo "<input type='button' value='Login' id='transparent' onclick=\"location.href='/login'\">
+                  <input type='button' value='Register' id='transparent' onclick=\"location.href='/register'\">";
+          }
+      ?>
+    </div>
+  </form>
+</header>
+@if (!empty($message))
+<script>
+    swal({
+        title: "{{ $message }}",
+        icon: "{{ $type }}",
+        button: "OK",
+    });
+</script>
+@endif
     <?php
         if(isset($_POST['logout'])){
             $_SESSION["login"] = false;

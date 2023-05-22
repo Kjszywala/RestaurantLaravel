@@ -9,6 +9,7 @@
   <title>Register</title>
   <link rel="stylesheet" href="register.css">
 </head>
+
     <center>
         <h1 id="register">Register</h1>
     </center><br>
@@ -65,27 +66,6 @@
             </tr>
         </table> 
     </form>
-    <?php
-        // if(isset($_POST['singUp'])){
-        //     $login = $_POST['login'];
-        //     $password1 = $_POST['password'];
-        //     $password = password_hash($password1, PASSWORD_BCRYPT);
-        //     $name = $_POST['name'];
-        //     $surname = $_POST['surname'];
-        //     $email = $_POST['email'];
-        //     $age = $_POST['age'];
-        //     $gender = $_POST['gender'];
-        //     open_connection();
-        //     global $connection;
-        //     $query = "insert into users values(null, '$login', '$password', '$name', '$surname', '$email', '$age', '$gender');";
-        //     mysqli_query($connection, $query) or exit("Query error: " . $query);
-        //     $_SESSION['login'] = true;
-        //     $_SESSION["name"] = $name;
-        //     header("Location: mainwindow.php");
-        //     close_connection();
-        //     die();
-        // }
-    ?>
     </center>
 </div>
 @endsection

@@ -31,6 +31,7 @@ Route::get('/gallery', [GalleryController::class, 'index']);
 
 use App\Http\Controllers\LoginController;
 Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'login'])->name('logUser');
 
 use App\Http\Controllers\RegisterController;
 Route::get('/register', [RegisterController::class, 'index']);
