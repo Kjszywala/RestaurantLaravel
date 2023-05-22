@@ -1,7 +1,6 @@
 @extends('header')
 @section('content')
 <?php
-    session_start();
     include 'phpscripts.php';   
 ?>
 <head>
