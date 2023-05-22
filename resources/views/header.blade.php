@@ -55,8 +55,8 @@
           </div>
         </center>
         @endif
-    <br><br><br><br><br><br>
-<div class="row" style="margin-top:-100px;">
+    <br><br><br><br>
+<div class="row" style="margin-top:-80px;">
     <div class="col-12 text-center">
         @yield('content')
 	</div>
