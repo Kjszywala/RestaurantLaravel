@@ -1,9 +1,5 @@
 @extends('header')
 @section('content')
-<?php
-    session_start();
-    include 'phpscripts.php';
-?>
 <html>
 <head>
   <meta charset="utf-8">
@@ -39,17 +35,5 @@
             </table> 
         </form>
     </center>
-    <?php
-        if(isset($_POST['submit'])){
-            $to = "kjszywala@protonmail.com";
-            $header = "MIME-Version: 1.0" . "\r\n";
-            $header .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $header .= 'From: <'. $_POST['email'] . ">" . "\r\n";
-            $header .= 'Name: <'. $_POST['fullname'] . ">" . "\r\n";
-            $subject = "Email";
-            $message = $_POST['message'];
-            mail($to,$subject,$message,$header);
-        }
-    ?>
 </div>
 @endsection
