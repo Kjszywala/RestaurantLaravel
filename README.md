@@ -104,6 +104,8 @@ By following these steps, you should be able to run the website locally.
 ## Migrate Database
 
 Remember to include the .env file in your project.
+
+Open a command prompt or terminal in the repository folder.
 In cmd run the command:
 
 ```ruby
