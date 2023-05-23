@@ -41,8 +41,5 @@ use App\Http\Controllers\LogoutController;
 Route::get('/logout', [LogoutController::class, 'index'])->name('logoutUser');
 
 use App\Http\Controllers\ReservationController;
-Route::get('/reservation', [ReservationController::class, 'index']);
-Route::get('/reservation_edit/edit/{id}', [ReservationController::class, 'edit']);
-Route::post('/reservation/update/{id}', [ReservationController::class, 'update']) -> name('updateReservation');
-Route::get('/reservation_edit/add/{id}', [ReservationController::class, 'add']);
-Route::get('/reservation/delete/{id}', [ReservationController::class, 'delete']);
+Route::resource('reservation', ReservationController::class);
+
