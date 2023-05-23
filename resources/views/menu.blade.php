@@ -1,14 +1,5 @@
-<?php
-  // Pobieranie numeru strony z adresu URL
-  $page = isset($_GET['page']) ? $_GET['page'] : 1;
-  
-  // Ustawienie ścieżki do pliku PDF
-  $pdf_file = 'menu.pdf';
-  
-  // Generowanie linków do kolejnych stron
-  $prev_page = $page - 1;
-  $next_page = $page + 1;
-?>
+@extends('header')
+@section('content')
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +8,12 @@
 </head>
 <body>
   <div>
-    <iframe src="<?php echo $pdf_file; ?>#page=<?php echo $page; ?>" width="100%" height="1000"></iframe>
+    <div>
+      <object data="menu.pdf" type="application/pdf" width="50%" height="800">
+          alt : <a href="menu.pdf">menu.pdf</a>
+      </object>
+  </div>
   </div>
 </body>
 </html>
+@endsection
