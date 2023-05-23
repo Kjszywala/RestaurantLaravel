@@ -16,13 +16,14 @@
       <input type="button" value="About Us" id="transparent" onclick="location.href='/aboutus'">
       <input type="button" value="Contact Us" id="transparent" onclick="location.href='/contact'">
       <input type="button" value="Gallery" id="transparent" onclick="location.href='/gallery'">
-      <input type="button" value="Reservations" id="transparent" onclick="location.href='/reservation'">
+
       @php
           $name1 = session('name');
           $isLoggedIn = session('login');
       @endphp
 
       @if ($isLoggedIn)
+          <input type="button" value="Reservations" id="transparent" onclick="location.href='/reservation'">
           <input type="button" value="Logout" name="logout" id="transparent" onclick="location.href='/logout'">
           <label id="label1" style="color:white;">Hello {{ $name1 }}!</label>
       @else

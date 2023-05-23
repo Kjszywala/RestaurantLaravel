@@ -31,10 +31,11 @@
         <input type="time" name="time" value="{{ $reservation->time }}" step="1800" min="09:00" max="19:00" name="reservation-time" maxlength="255" id="textbox" required/></td>><br><br>
 
         <label for="party_size">Party size:</label>
-        <select name="table_id">
+        <select name="party_size">
             @foreach($tables as $table)
                 <option value="{{ $table->id }}">{{ $table->party_size }}</option>
             @endforeach
+        </select>
 
         <label for="user_id">ID user:</label>
         <input type="hidden" name="user_id" value="{{ $reservation->user_id }}"><br><br>

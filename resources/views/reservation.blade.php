@@ -35,8 +35,8 @@
             <td>{{date('d F', strtotime($item->date))}}</td>
             <td>{{date('H:i A', strtotime($item->time))}}</td>
             <td>{{$item->party_size}}</td>
-            <td align="center">
 
+            <td align="center">
             <form method="GET" action='/reservation/{{$item->id}}/edit'>
             <input type="submit"  class="btn btn-success" value="Edit">
             </form>

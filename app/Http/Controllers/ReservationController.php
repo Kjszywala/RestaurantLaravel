@@ -63,12 +63,12 @@ class ReservationController extends Controller
     {
         if ($reservation->id != 0) {
             $reservation = Reservation::find($reservation->id);
-            return view('reservation_edit', ['reservation' => $reservation]);
+            return view('reservation_edit', ['reservation' => $reservation, 'tables' => Table::all()]);
         } else {
             $user = session('user_id');
             var_dump($user);
             $reservation = new Reservation(['id' => null, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => $user, 'table_id' => '']);
-            return view('reservation_add', ['reservation' => $reservation, 'tables' => Table::all() ]);
+            return view('reservation_add', ['reservation' => $reservation, 'tables' => Table::all()]);
         }
 
     }
