@@ -41,4 +41,5 @@ use App\Http\Controllers\LogoutController;
 Route::get('/logout', [LogoutController::class, 'index'])->name('logoutUser');
 
 use App\Http\Controllers\ReservationController;
-Route::resource('reservations', ReservationController::class);
+Route::resource('reservation', ReservationController::class);
+
