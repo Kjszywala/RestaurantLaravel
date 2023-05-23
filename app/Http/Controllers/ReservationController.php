@@ -63,10 +63,9 @@ class ReservationController extends Controller
     {
         if ($reservation->id != 0) {
             $reservation = Reservation::find($reservation->id);
-            return view('reservation_edit', ['reservation' => $reservation]);
+            return view('reservation_edit', ['reservation' => $reservation, 'tables' => Table::all()]);
         } else {
             $user = session('user_id');
-            var_dump($user);
             $reservation = new Reservation(['id' => null, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => $user, 'table_id' => '']);
             return view('reservation_add', ['reservation' => $reservation, 'tables' => Table::all() ]);
         }
@@ -84,16 +83,15 @@ class ReservationController extends Controller
     public function update(Request $request, Reservation $reservation)
     {
         $user = session('user_id');
-        var_dump($user);
-        // $reservation->user->Name = $request->input('name');
         $reservation->date = $request->input('date');   
         $reservation->time = $request->input('time');
-        $reservation->party_size = $request->input('party_size');
         $reservation->user_id = $user;
         $reservation->table_id = $request->input('table_id');
-
+        var_dump($reservation->table_id);
+        $row = Table::find($reservation->table_id);
+        var_dump($row);
+        $reservation->party_size = $row->party_size;
         $reservation->save();
-        // $reservation->user->save();
 
         return redirect('/reservation');
     }

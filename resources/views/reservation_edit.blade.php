@@ -14,29 +14,18 @@
     <form method=POST action="{{route('reservation.store')}}">	
     @endif
         @csrf
-    
-        {{-- <label for="text">Name:</label>
-        <input type="text" name="name" value="{{ $reservation->user->name }}"><br><br>
-
-        <label for="text">Surname:</label>
-        <input type="text" name="name" value="{{ $reservation->user->surname }}"><br><br>
-
-        <label for="text">Phone:</label>
-        <input type="text" name="name" value="{{ $reservation->user->phone }}"><br><br> --}}
-
         <label for="date">Date:</label>
         <input type="date" name="date" value="{{ $reservation->date }}"><br><br>
 
         <label for="time">Time:</label>
         <input type="time" name="time" value="{{ $reservation->time }}" step="1800" min="09:00" max="19:00" name="reservation-time" maxlength="255" id="textbox" required/></td>><br><br>
 
-        <label for="party_size">Party size:</label>
-        <select name="table_id">
+        <label for="table_id">Party size:</label>
+        <select name="table_id" id="table_id">
             @foreach($tables as $table)
                 <option value="{{ $table->id }}">{{ $table->party_size }}</option>
             @endforeach
-
-        <label for="user_id">ID user:</label>
+        </select>
         <input type="hidden" name="user_id" value="{{ $reservation->user_id }}"><br><br>
 
         
