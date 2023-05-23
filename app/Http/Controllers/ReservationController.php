@@ -78,11 +78,12 @@ class ReservationController extends Controller
      */
     public function update(Request $request, Reservation $reservation)
     {
-        $reservation->user->name = $request->input('name');
+        // $reservation->user->name = $request->input('name');
         $reservation->date = $request->input('date');   
         $reservation->time = $request->input('time');
         $reservation->party_size = $request->input('party_size');
-
+        $reservation->user_id = $request->input('user_id');
+        $reservation->table_id = $request->input('table_id');
         $reservation->save();
         $reservation->user->save();
 

@@ -11,7 +11,7 @@
         <button id="button" onclick="location.href='mainwindow.php'">Main Menu</button>
         
     </center><br>
-<div id="rcorners1" >
+<div id="rcorners2" >
     <center>
         <form method=POST action="">
             <table>

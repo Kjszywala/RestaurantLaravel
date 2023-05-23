@@ -2,7 +2,7 @@
 @section('content')
 @php $naglowki = array("name","surname","data", "time", "party_size",); @endphp
 
-<link rel="stylesheet" href="aboutus.css">
+<link rel="stylesheet" href="booking.css">
 
 <br>
 <br>

@@ -23,17 +23,6 @@
         cursor: not-allowed;
         background: #EDEADE;
     }
-
-    #rcorners2 {
-        border-radius: 25px;
-        background: white; 
-        width: auto;
-        margin-left: 40px;
-        margin-right: 40px;
-        height: auto;
-        margin-bottom: 3%;
-        background-size: 10% 10%;
-
     #div{
         background-color: transparent;
         width: 50%;
@@ -70,15 +59,3 @@
         height: 100px;
         float: left;
     }
-
-    .table .thead-dark th {
-        color: #fff;
-        background-color: #343a40;
-        border-color: #454d55;
-      }
-      
-      .table .thead-light th {
-        color: #495057;
-        background-color: #e9ecef;
-        border-color: #dee2e6;
-      }
