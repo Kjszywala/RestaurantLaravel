@@ -21,6 +21,7 @@ class LoginController extends Controller
                 $type = "success";
                 Session::put('login', true);
                 Session::put('name', $user->name);
+                Session::put('user_id', $user->id);
             } else {
                 // Incorrect password
                 $message = "Incorrect password.";

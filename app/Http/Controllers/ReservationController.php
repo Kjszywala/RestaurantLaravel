@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Reservation;
+use App\Models\Table;
 
 class ReservationController extends Controller
 {
@@ -24,6 +25,7 @@ class ReservationController extends Controller
      */
     public function create()
     {
+
         return $this->edit(new Reservation(['id' => 0, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => '', 'table_id' => '']));
     }
 
@@ -63,10 +65,11 @@ class ReservationController extends Controller
             $reservation = Reservation::find($reservation->id);
             return view('reservation_edit', ['reservation' => $reservation]);
         } else {
-            $reservation = new Reservation(['id' => null, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => '', 'table_id' => '']);
-            return view('reservation_add', ['reservation' => $reservation, 'users' => $reservation->user, 'tables' => $reservation->table]);
+            $user = session('user_id');
+            var_dump($user);
+            $reservation = new Reservation(['id' => null, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => $user, 'table_id' => '']);
+            return view('reservation_add', ['reservation' => $reservation, 'tables' => Table::all() ]);
         }
-        
 
     }
     
@@ -80,11 +83,13 @@ class ReservationController extends Controller
      */
     public function update(Request $request, Reservation $reservation)
     {
+        $user = session('user_id');
+        var_dump($user);
         // $reservation->user->Name = $request->input('name');
         $reservation->date = $request->input('date');   
         $reservation->time = $request->input('time');
         $reservation->party_size = $request->input('party_size');
-        $reservation->user_id = $request->input('user_id');
+        $reservation->user_id = $user;
         $reservation->table_id = $request->input('table_id');
 
         $reservation->save();
