@@ -1,6 +1,7 @@
 @extends('header')
 @section('content')
-
+<link rel="stylesheet" href="booking.css">
+<link rel="stylesheet" href="css/bootstrap.css">
 
 <div id="rcorners2" class="form-container1">
     <div class="form-content1">
@@ -31,8 +32,7 @@
                   <option value="{{ $table->id }}">{{ $table->party_size }}</option>
               @endforeach
           </select><br>
-  
-          <input type="submit" class="button-37" value="Implement Changes">
+          <input type="submit" class="button-37" value="Add Reservation">
       </form>
     </div>
 </div>
@@ -41,6 +41,7 @@
   height: 550px;
   background-color: transparent;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -63,7 +64,8 @@
 .reservation-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-label {
