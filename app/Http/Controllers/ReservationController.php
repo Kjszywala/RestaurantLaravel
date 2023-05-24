@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -14,8 +13,13 @@ class ReservationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $reservations = Reservation::all();
-        return view('reservation', ['reservation' => $reservations]);
+        $isLoggedIn = session('login');
+        $user_id = session('user_id');
+        if($isLoggedIn){
+            $reservations = Reservation::where('user_id', $user_id)->get();
+            return view('reservation', ['reservation' => $reservations]);
+        }
+        return view('login');
     }
 
     /**
@@ -25,7 +29,6 @@ class ReservationController extends Controller
      */
     public function create()
     {
-
         return $this->edit(new Reservation(['id' => 0, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => '', 'table_id' => '']));
     }
 

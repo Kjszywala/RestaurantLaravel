@@ -6,13 +6,7 @@
 
 <div class="row" style="margin-top:-50px;">
     <center>
-        <h1>Reservation</h1>
-            <td>
-                <form method='GET' action='/reservation/create'>
-                    <b><input type='submit'  class="btn btn-success" value='Add new'></b>
-                </form>
-            </td>
-        
+        <h1>Reservations</h1>
         <br><br>
         <table class="styled-table"><tr>
             <thead class="thead-dark">
@@ -86,6 +80,10 @@ border-bottom: 2px solid #009879;
 .styled-table tbody tr.active-row {
 font-weight: bold;
 color: #009879;
+}
+h1{
+    color: black;
+    font-family: brush script mt, cursive;
 }
 </style>
 @endsection
