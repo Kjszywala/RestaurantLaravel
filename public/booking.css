@@ -12,12 +12,21 @@
     #rcorners2 {
         border-radius: 25px;
         background: white;
-        height: 60%;
-        width: 500px;
+        height: auto;
+        width: auto;
         margin: 0 auto;
         background-size: 10% 10%;
     }
-    
+    #label1 {
+        background-color: transparent;
+        border-color: transparent;
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 2ch;
+        margin-right: 2ch;
+        color: white;
+        font-family: brush script mt, cursive;
+    }
     input[type=submit]{
         background-color: #04AA6D;
         border: none;

@@ -19,6 +19,16 @@
         cursor: pointer;
         border-radius: 5px;
     }
+    #label1 {
+        background-color: transparent;
+        border-color: transparent;
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 2ch;
+        margin-right: 2ch;
+        color: white;
+        font-family: brush script mt, cursive;
+    }
     .buttonSignUp{
         background-color: #04AA6D;
         border: none;

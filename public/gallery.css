@@ -29,6 +29,16 @@ body {
         cursor: not-allowed;
         background: #EDEADE;
     }
+    #label1 {
+      background-color: transparent;
+      border-color: transparent;
+      font-size: x-large;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-left: 2ch;
+      margin-right: 2ch;
+      color: white;
+      font-family: brush script mt, cursive;
+  }
     #div{
         background-color: transparent;
         width: 50%;
@@ -52,9 +62,9 @@ body {
         background-color: #5ccc44;
     }
 
-	#img2{        
-	width: 250px;        
-	height: 100px;    
+	#img2{
+	width: 250px;
+	height: 100px;
 	}
     
 	#div2{
