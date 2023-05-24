@@ -1,6 +1,6 @@
 @extends('header')
 @section('content')
-@php $naglowki = array("name","surname","data", "time", "party_size",); @endphp
+@php $naglowki = array("Name","Surname","Date", "Time", "Party Size",); @endphp
 
 <link rel="stylesheet" href="booking.css">
 
