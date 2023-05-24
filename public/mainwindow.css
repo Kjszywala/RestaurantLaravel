@@ -152,7 +152,6 @@
     }
     input[type=button], input[type=submit]{
         color: white;
-        font-family: brush script mt, cursive;
     }
     #bottomDiv{
         position: absolute;
