@@ -25,6 +25,7 @@ Route::get('/aboutus', [AboutController::class, 'index']);
 
 use App\Http\Controllers\ContactController;
 Route::get('/contact', [ContactController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'send_email'])->name('sendEmail');
 
 use App\Http\Controllers\GalleryController;
 Route::get('/gallery', [GalleryController::class, 'index']);
