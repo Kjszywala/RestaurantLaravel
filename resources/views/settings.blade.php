@@ -66,7 +66,7 @@
 
     <div class="form-group form2">
       <label for="password">Password:</label>
-      <input type="password" class="class32" name="password"value="" id="password" required>
+      <input type="password" class="class32" name="password"value="" id="password">
     </div>
 
     <div class="form-group form2">

@@ -22,7 +22,7 @@ class UserController extends Controller
         $current_user->age = $request->input('age');
         $current_user->gender = $request->input('gender');
         $new_password = password_hash($request->input('password'), PASSWORD_BCRYPT);
-        if($new_password != '' || $new_password != null){
+        if($new_password == ""){
             $current_user->password = $new_password;
         } 
         if($current_user->save()){
