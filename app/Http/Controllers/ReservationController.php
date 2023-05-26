@@ -72,10 +72,8 @@ class ReservationController extends Controller
             $reservation = new Reservation(['id' => null, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => $user, 'table_id' => '']);
             return view('reservation_add', ['reservation' => $reservation, 'tables' => Table::all() ]);
         }
-
     }
     
-
         /**
      * Update the specified resource in storage.
      *

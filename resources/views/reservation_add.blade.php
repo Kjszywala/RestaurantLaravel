@@ -22,7 +22,7 @@
           <input type="time" name="time" value="{{ $reservation->time }}" step="1800" min="09:00" max="19:00" name="reservation-time" maxlength="255" id="textbox" required class="form-input"><br>
   
           <label for="party_size" class="form-label">Number of Guests:</label>
-          <input type="number" name="party_size" value="{{ $reservation->party_size }}" class="form-input"><br>
+          <input type="number" name="party_size" min="0" value="{{ $reservation->party_size }}" class="form-input"><br>
   
           <input type="hidden" name="user_id" value="{{ $reservation->userId }}"><br>
   

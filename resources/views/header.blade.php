@@ -24,7 +24,7 @@
       @if ($isLoggedIn)
           <input type="button" value="Reservations" id="transparent" onclick="location.href='/reservation'">
           <input type="button" value="Logout" name="logout" id="transparent" onclick="location.href='/logout'">
-          <label id="label1" style="color:white;">Hello {{ $name1 }}!</label>
+          <input type="button" value="Hello {{ $name1 }}!" name="logout" id="transparent" onclick="location.href='/settings'">
       @else
           <input type="button" value="Login" id="transparent" onclick="location.href='/login'">
           <input type="button" value="Register" id="transparent" onclick="location.href='/register'">

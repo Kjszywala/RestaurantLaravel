@@ -44,3 +44,7 @@ Route::get('/logout', [LogoutController::class, 'index'])->name('logoutUser');
 use App\Http\Controllers\ReservationController;
 Route::resource('reservation', ReservationController::class);
 
+use App\Http\Controllers\UserController;
+Route::get('/settings', [UserController::class, 'index']);
+Route::post('/settings', [UserController::class, 'save'])->name('settingsUser');
+
