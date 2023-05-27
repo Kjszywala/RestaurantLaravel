@@ -16,18 +16,18 @@
           @csrf
       
           <label for="date" class="form-label">Date:</label>
-          <input type="date" name="date" value="{{ $reservation->date }}" class="form-input"><br>
+          <input type="date" name="date" value="{{ $reservation->date }}" class="form-input" required><br>
   
           <label for="time" class="form-label">Time:</label>
           <input type="time" name="time" value="{{ $reservation->time }}" step="1800" min="09:00" max="19:00" name="reservation-time" maxlength="255" id="textbox" required class="form-input"><br>
   
           <label for="party_size" class="form-label">Number of Guests:</label>
-          <input type="number" name="party_size" min="0" value="{{ $reservation->party_size }}" class="form-input"><br>
+          <input type="number" name="party_size" min="0" value="{{ $reservation->party_size }}" class="form-input" required><br>
   
           <input type="hidden" name="user_id" value="{{ $reservation->userId }}"><br>
   
           <label for="table_id" class="form-label">Select a Table:</label>
-          <select name="table_id" class="form-select">
+          <select name="table_id" class="form-select" required>
               @foreach($tables as $table)
                   <option value="{{ $table->id }}">{{ $table->party_size }}</option>
               @endforeach
@@ -199,4 +199,44 @@
   margin: 0;
 }
 </style>
+@endsection
+@section('scripts')
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var timeInput = document.getElementById('time-input');
+    var startTime = new Date('1970-01-01T09:00');
+    var endTime = new Date('1970-01-01T19:00');
+    var interval = 30; // 30 minutes
+
+    var currentTime = startTime;
+    var timeOptions = [];
+
+    while (currentTime <= endTime) {
+      var formattedTime = currentTime.toTimeString().slice(0, 5);
+      timeOptions.push(formattedTime);
+      currentTime.setMinutes(currentTime.getMinutes() + interval);
+    }
+
+    timeInput.addEventListener('focus', function() {
+      timeInput.setAttribute('type', 'time');
+      timeInput.setAttribute('list', 'time-options');
+    });
+
+    timeInput.addEventListener('blur', function() {
+      timeInput.setAttribute('type', 'text');
+      timeInput.removeAttribute('list');
+    });
+
+    var dataList = document.createElement('datalist');
+    dataList.id = 'time-options';
+
+    timeOptions.forEach(function(time) {
+      var option = document.createElement('option');
+      option.value = time;
+      dataList.appendChild(option);
+    });
+
+    document.body.appendChild(dataList);
+  });
+</script>
 @endsection
