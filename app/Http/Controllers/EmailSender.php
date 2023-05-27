@@ -26,8 +26,6 @@ class EmailSender
             $this->mail->Host = 'smtp.gmail.com';
             $this->mail->SMTPAuth = true;
             $this->mail->SMTPSecure = 'tls';
-            $this->mail->Username = 'restaurantkssa@gmail.com';
-            $this->mail->Password = 'sebakamil';
             $this->mail->Port = 587;
         } catch (Exception $e) {
             echo "Error initializing email sender: {$this->mail->ErrorInfo}";
