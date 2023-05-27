@@ -5,6 +5,10 @@ use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Table;
 
+/**
+ * This class serves as the controller for managing reservations in the application.
+ * It extends the base Controller class provided by Laravel.
+ */
 class ReservationController extends Controller
 {
         /**
@@ -24,7 +28,6 @@ class ReservationController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -32,31 +35,18 @@ class ReservationController extends Controller
         return $this->edit(new Reservation(['id' => 0, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => '', 'table_id' => '']));
     }
 
-        /**
+    /**
      * Store a newly created resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
 		return $this->update($request, 
 						new Reservation(['id' => 0, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => '', 'table_id' => '']));
     }
 
-        /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Reservation  $reservation
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Reservation $reservation)
-    {
-        //
-    }
-
-        /**
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Reservation  $reservation
@@ -74,9 +64,8 @@ class ReservationController extends Controller
         }
     }
     
-        /**
+    /**
      * Update the specified resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Reservation  $reservation
      * @return \Illuminate\Http\Response
@@ -97,7 +86,7 @@ class ReservationController extends Controller
         return redirect('/reservation');
     }
 
-        /**
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Reservation  $reservation
