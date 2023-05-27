@@ -2,7 +2,7 @@
 @section('content')
 
 <link rel="stylesheet" href="booking.css">
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">
 
 <div id="rcorners1" class="form-container1" style="height: 550px;">
     <div class="form-content1">
