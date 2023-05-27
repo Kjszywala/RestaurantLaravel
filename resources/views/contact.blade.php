@@ -31,7 +31,7 @@
                     <td><b>Message:</b></td><br>
                 </tr>
                 <tr>
-                    <td colspan="2" style="width: 100%;"><textarea name="message" id="message" maxlength="255" required></textarea></td>
+                    <td colspan="2" style="width: 100%;"><textarea name="message" id="message" style="resize: none;" maxlength="255" required cols="40" rows="5"></textarea></td>
                 </tr>
                 <tr>
                     <td colspan="2">
