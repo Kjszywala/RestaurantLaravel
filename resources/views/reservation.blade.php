@@ -12,8 +12,14 @@
             <table class="styled-table" id="reservation-table">
                 <thead class="thead-dark">
                     <tr>
+                        @php $index = 0; @endphp
                         @foreach($naglowki as $naglowek) 
-                            <th>{{$naglowek}}</th>
+                            @if($index < 2 || $index == 5)
+                                <th data-sortable="false" >{{$naglowek}}</th>
+                            @else
+                                <th>{{$naglowek}}</th>
+                            @endif
+                            @php $index++; @endphp
                         @endforeach
                     </tr>
                 </thead>
@@ -66,6 +72,7 @@
 </script>
 @endsection
 <style>
+
 .table-container {
     max-width: 700px;
     margin: 0 auto;
