@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ asset('mainwindow.css') }}">
 	<link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 </head>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -92,6 +95,7 @@
   </div>
 </footer>
 </div>
+@yield('scripts')
 <style>
 .footer {
   background-color: #333;
