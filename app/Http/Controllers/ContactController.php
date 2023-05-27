@@ -31,10 +31,8 @@ class ContactController extends Controller
         $message = $request->input('message');
         $subject = $request->input('subject');
         $emailSender->sendEmail(
-            'restaurant@example.com', 
-            'Restaurant', 
             $email, 
-            $fullname, 
+            $fullname,
             $subject, 
             $message
         );

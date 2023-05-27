@@ -26,6 +26,8 @@ class EmailSender
             $this->mail->Host = 'smtp.gmail.com';
             $this->mail->SMTPAuth = true;
             $this->mail->SMTPSecure = 'tls';
+            $this->mail->Username = 'restaurantkssa@gmail.com';
+            $this->mail->Password = 'sebakamil';
             $this->mail->Port = 587;
         } catch (Exception $e) {
             echo "Error initializing email sender: {$this->mail->ErrorInfo}";
@@ -40,12 +42,12 @@ class EmailSender
      * Otherwise, it catches any exceptions that occur and displays an error message, 
      * then returns false.
      */
-    public function sendEmail($senderEmail, $senderName, $recipientEmail, $recipientName, $subject, $body)
+    public function sendEmail($senderEmail, $senderName, $subject, $body)
     {
         try {
             // Recipients
             $this->mail->setFrom($senderEmail, $senderName);
-            $this->mail->addAddress($recipientEmail, $recipientName);
+            $this->mail->addAddress('restaurantkssa@gmail.com', 'Restaurant');
 
             // Content
             $this->mail->isHTML(true);
