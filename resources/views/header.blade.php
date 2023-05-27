@@ -47,7 +47,7 @@
   </script>
 @endif
     <div id = "image">
-        <img src="images/logo.png" id="logo">
+        <img src="{{ asset('images/logo.png') }}" id="logo">
     </div>
         @if ($isLoggedIn)
           <div id="bookdiv">
