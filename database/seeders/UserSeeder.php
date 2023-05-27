@@ -5,10 +5,17 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+
+/**
+ * class is responsible for populating the users table in the database with dummy user data. 
+ * It also extends the Seeder class provided by Laravel for database seeding.
+ */
 class UserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * method which serves as the entry point for the seeder. 
+     * Inside this method, the DB::table('users')->insert() function 
+     * is used to insert data into the users table.
      */
     public function run(): void
     {
