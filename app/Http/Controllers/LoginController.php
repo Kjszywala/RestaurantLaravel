@@ -27,7 +27,7 @@ class LoginController extends Controller
 	public function login(Request $request){
 		$login = $request->input('login');
         $password = $request->input('password');
-
+            
         $user = User::where('login', $login)->first();
         if ($user) {
             if (password_verify($password, $user->password)) {
