@@ -116,8 +116,8 @@
             modalArrows.classList.add('modal-arrows');
 
             const prevArrow = document.createElement('span');
-            prevArrow.classList.add('modal-arrow');
-            prevArrow.innerHTML = '&lt;';
+            prevArrow.classList.add('modal-arrow1');
+            prevArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
             prevArrow.addEventListener('click', (event) => {
                 event.stopPropagation(); // Prevent modal from closing
 
@@ -130,8 +130,8 @@
             modalArrows.appendChild(prevArrow);
 
             const nextArrow = document.createElement('span');
-            nextArrow.classList.add('modal-arrow');
-            nextArrow.innerHTML = '&gt;';
+            nextArrow.classList.add('modal-arrow2');
+            nextArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
             nextArrow.addEventListener('click', (event) => {
                 event.stopPropagation(); // Prevent modal from closing
 
