@@ -16,13 +16,13 @@
     @endif
         @csrf
         <label for="date" class="form-label">Date:</label>
-        <input type="date" name="date" value="{{ $reservation->date }}" class="form-input"><br><br>
+        <input type="date" name="date" value="{{ $reservation->date }}" class="form-input" required><br><br>
 
         <label for="time" class="form-label">Time:</label>
         <input type="time" name="time" value="{{ $reservation->time }}" step="1800" min="09:00" max="19:00" name="reservation-time" class="form-input" maxlength="255" id="textbox" required/></td><br><br>
 
         <label for="table_id" class="form-label">Party size:</label>
-        <select name="table_id" id="table_id" class="form-select">
+        <select name="table_id" id="table_id" class="form-select" required>
             @foreach($tables as $table)
                 <option value="{{ $table->id }}">{{ $table->party_size }}</option>
             @endforeach
