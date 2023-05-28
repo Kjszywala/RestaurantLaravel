@@ -22,7 +22,7 @@
                 </tr>
                 <tr>
                     <td><b>Password</b></td>
-                    <td><input type="text" name="password" maxlength="255" required/></td>
+                    <td><input type="password" name="password" maxlength="255" required/></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" name="singIn" id="test" value='Sign In' style='width: 100%;'></td>

@@ -1,11 +1,14 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Table;
 
+/**
+ * This class serves as the controller for managing reservations in the application.
+ * It extends the base Controller class provided by Laravel.
+ */
 class ReservationController extends Controller
 {
         /**
@@ -14,46 +17,36 @@ class ReservationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $reservations = Reservation::all();
-        return view('reservation', ['reservation' => $reservations]);
+        $isLoggedIn = session('login');
+        $user_id = session('user_id');
+        if($isLoggedIn){
+            $reservations = Reservation::where('user_id', $user_id)->get();
+            return view('reservation', ['reservation' => $reservations]);
+        }
+        return view('login');
     }
 
     /**
      * Show the form for creating a new resource.
-     *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-
         return $this->edit(new Reservation(['id' => 0, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => '', 'table_id' => '']));
     }
 
-        /**
+    /**
      * Store a newly created resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
 		return $this->update($request, 
 						new Reservation(['id' => 0, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => '', 'table_id' => '']));
     }
 
-        /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Reservation  $reservation
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Reservation $reservation)
-    {
-        //
-    }
-
-        /**
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Reservation  $reservation
@@ -66,17 +59,13 @@ class ReservationController extends Controller
             return view('reservation_edit', ['reservation' => $reservation, 'tables' => Table::all()]);
         } else {
             $user = session('user_id');
-            var_dump($user);
             $reservation = new Reservation(['id' => null, 'date' => '', 'time' => '', 'party_size' => '', 'user_id' => $user, 'table_id' => '']);
             return view('reservation_add', ['reservation' => $reservation, 'tables' => Table::all()]);
         }
-
     }
     
-
-        /**
+    /**
      * Update the specified resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Reservation  $reservation
      * @return \Illuminate\Http\Response
@@ -84,21 +73,20 @@ class ReservationController extends Controller
     public function update(Request $request, Reservation $reservation)
     {
         $user = session('user_id');
-        var_dump($user);
-        // $reservation->user->Name = $request->input('name');
         $reservation->date = $request->input('date');   
         $reservation->time = $request->input('time');
-        $reservation->party_size = $request->input('party_size');
         $reservation->user_id = $user;
         $reservation->table_id = $request->input('table_id');
-
+        var_dump($reservation->table_id);
+        $row = Table::find($reservation->table_id);
+        var_dump($row);
+        $reservation->party_size = $row->party_size;
         $reservation->save();
-        // $reservation->user->save();
 
         return redirect('/reservation');
     }
 
-        /**
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Reservation  $reservation

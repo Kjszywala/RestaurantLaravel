@@ -17,6 +17,16 @@
         margin-bottom: 3%;
         background-size: 10% 10%;
     }
+    #label1 {
+        background-color: transparent;
+        border-color: transparent;
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 2ch;
+        margin-right: 2ch;
+        color: white;
+        font-family: brush script mt, cursive;
+    }
     #rcorners1:hover{
         margin-left: 30px;
         margin-right: 30px;

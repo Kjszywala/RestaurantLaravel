@@ -29,6 +29,16 @@
         text-align: center;
         
     }
+    #label1 {
+        background-color: transparent;
+        border-color: transparent;
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 2ch;
+        margin-right: 2ch;
+        color: white;
+        font-family: brush script mt, cursive;
+    }
     #logo{
         width: 100px;
     }
@@ -123,7 +133,6 @@
         border-radius: 20px;
         margin-top: 80px;
         font-size: x-large;
-        font-family: brush script mt, cursive;
     }
     #logToBook{
         border-radius: 25px;
@@ -143,7 +152,6 @@
     }
     input[type=button], input[type=submit]{
         color: white;
-        font-family: brush script mt, cursive;
     }
     #bottomDiv{
         position: absolute;
