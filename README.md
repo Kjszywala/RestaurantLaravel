@@ -99,8 +99,6 @@ This will start the server, and you will see a URL (e.g., http://localhost:8000)
 
 Make sure you have PHP installed on your system and the php command is available in your system's PATH.
 
-By following these steps, you should be able to run the website locally.
-
 ## Migrate Database
 
 Remember to include the .env file in your project.
@@ -111,4 +109,5 @@ In cmd run the command:
 ```ruby
 php artisan migrate --path=database/migrations/restaurant/
 ```
+
 
